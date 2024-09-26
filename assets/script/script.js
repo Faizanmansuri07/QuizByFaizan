@@ -91,6 +91,7 @@ function gameOver() {
     totalNoQuestions = 1
     userScore.innerHTML = `You score ${correctAnswers} out of 10`;
     nextBtn.innerHTML = "New Game"
+    correctAnswers = 0
 }
 
 function over() {
@@ -100,7 +101,7 @@ function over() {
     p.innerHTML = "Today's questions are over....!"
     container.appendChild(p)
     nextBtn.style.display = "none"
-    correctAnswers = 0;
+    
 }
 
 
