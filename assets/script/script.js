@@ -100,6 +100,7 @@ function over() {
     p.innerHTML = "Today's questions are over....!"
     container.appendChild(p)
     nextBtn.style.display = "none"
+    correctAnswers = 0;
 }
 
 
