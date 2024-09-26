@@ -39,7 +39,7 @@ function generateQuestionNumber() {
 }
 
 function renderQuiz(index) {
-    nextBtn.innerHTML = "new question"
+    nextBtn.innerHTML = "New Question"
     const quizObj = questions[index];
     currentQueNo.innerHTML = `${totalNoQuestions} / 10`
     question.innerHTML = `${totalNoQuestions}. ${quizObj.question}`;
