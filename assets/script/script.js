@@ -39,6 +39,7 @@ function generateQuestionNumber() {
 }
 
 function renderQuiz(index) {
+    nextBtn.innerHTML = "new question"
     const quizObj = questions[index];
     currentQueNo.innerHTML = `${totalNoQuestions} / 10`
     question.innerHTML = `${totalNoQuestions}. ${quizObj.question}`;
@@ -98,6 +99,7 @@ function over() {
     const p = document.createElement("p");
     p.innerHTML = "Today's questions are over....!"
     container.appendChild(p)
+    nextBtn.style.display = "none"
 }
 
 
