@@ -79,7 +79,6 @@ body{
 .btn{
      width: 100%;
      margin: 10px 0;
-     height: 35px;
      text-align: left;
      padding: 0 10px;
      background: #fff;
@@ -89,6 +88,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
     transition : all 0.3s ease-in-out 0.5ms;
+    padding: 10px 15px;
 }
 .btn:hover:not([disabled]){
     background: #222;

@@ -1,303 +1,502 @@
 const questions = [
     {
-        id: 1,
-        question: "What is the capital of India?",
-        answers: [
-            { text: "Mumbai", correct: false },
-            { text: "Kolkata", correct: false },
-            { text: "Chennai", correct: false },
-            { text: "Delhi", correct: true }
+        "id": 1,
+        "question": "What is the correct syntax for including a header file in C?",
+        "answers": [
+            { "text": "#include <header.h>", "correct": true },
+            { "text": "#include 'header.h'", "correct": false },
+            { "text": "include <header.h>", "correct": false },
+            { "text": "#include <header>", "correct": false }
         ]
     },
     {
-        id: 2,
-        question: "Which river is known as the Ganga of the South?",
-        answers: [
-            { text: "Krishna", correct: false },
-            { text: "Cauvery", correct: true },
-            { text: "Godavari", correct: false },
-            { text: "Narmada", correct: false }
+        "id": 2,
+        "question": "Which of the following is a valid variable name in C?",
+        "answers": [
+            { "text": "1variable", "correct": false },
+            { "text": "variable_1", "correct": true },
+            { "text": "variable-1", "correct": false },
+            { "text": "variable 1", "correct": false }
         ]
     },
     {
-        id: 3,
-        question: "Who was the first Prime Minister of India?",
-        answers: [
-            { text: "Jawaharlal Nehru", correct: true },
-            { text: "Mahatma Gandhi", correct: false },
-            { text: "Indira Gandhi", correct: false },
-            { text: "Sardar Vallabhbhai Patel", correct: false }
+        "id": 3,
+        "question": "What data type is used to represent a single character in C?",
+        "answers": [
+            { "text": "char", "correct": true },
+            { "text": "string", "correct": false },
+            { "text": "int", "correct": false },
+            { "text": "float", "correct": false }
         ]
     },
     {
-        id: 4,
-        question: "Which is the largest state in India by area?",
-        answers: [
-            { text: "Uttar Pradesh", correct: false },
-            { text: "Maharashtra", correct: false },
-            { text: "Rajasthan", correct: true },
-            { text: "Madhya Pradesh", correct: false }
+        "id": 4,
+        "question": "Which operator is used to assign a value to a variable?",
+        "answers": [
+            { "text": "==", "correct": false },
+            { "text": "=", "correct": true },
+            { "text": "+", "correct": false },
+            { "text": ":", "correct": false }
         ]
     },
     {
-        id: 5,
-        question: "What is the national animal of India?",
-        answers: [
-            { text: "Elephant", correct: false },
-            { text: "Lion", correct: false },
-            { text: "Tiger", correct: true },
-            { text: "Peacock", correct: false }
+        "id": 5,
+        "question": "What is the size of int data type in C?",
+        "answers": [
+            { "text": "2 bytes", "correct": false },
+            { "text": "4 bytes", "correct": true },
+            { "text": "8 bytes", "correct": false },
+            { "text": "Depends on compiler", "correct": false }
         ]
     },
     {
-        id: 6,
-        question: "Which Indian city is known as the 'Silicon Valley of India'?",
-        answers: [
-            { text: "Mumbai", correct: false },
-            { text: "Bengaluru", correct: true },
-            { text: "Hyderabad", correct: false },
-            { text: "Chennai", correct: false }
+        "id": 6,
+        "question": "Which of the following is not a valid C data type?",
+        "answers": [
+            { "text": "float", "correct": false },
+            { "text": "double", "correct": false },
+            { "text": "string", "correct": true },
+            { "text": "int", "correct": false }
         ]
     },
     {
-        id: 7,
-        question: "Who is known as the 'Father of the Nation' in India?",
-        answers: [
-            { text: "Jawaharlal Nehru", correct: false },
-            { text: "Mahatma Gandhi", correct: true },
-            { text: "Subhas Chandra Bose", correct: false },
-            { text: "Bhagat Singh", correct: false }
+        "id": 7,
+        "question": "What is the output of the following code: printf(\"%d\", 5 + 10);?",
+        "answers": [
+            { "text": "15", "correct": true },
+            { "text": "510", "correct": false },
+            { "text": "5 + 10", "correct": false },
+            { "text": "Error", "correct": false }
         ]
     },
     {
-        id: 8,
-        question: "Which is the national bird of India?",
-        answers: [
-            { text: "Parrot", correct: false },
-            { text: "Peacock", correct: true },
-            { text: "Pigeon", correct: false },
-            { text: "Sparrow", correct: false }
+        "id": 8,
+        "question": "Which of the following is used to create a function in C?",
+        "answers": [
+            { "text": "function", "correct": false },
+            { "text": "def", "correct": false },
+            { "text": "void", "correct": true },
+            { "text": "method", "correct": false }
         ]
     },
     {
-        id: 9,
-        question: "In which year did India gain independence?",
-        answers: [
-            { text: "1945", correct: false },
-            { text: "1947", correct: true },
-            { text: "1950", correct: false },
-            { text: "1952", correct: false }
+        "id": 9,
+        "question": "What keyword is used to return a value from a function?",
+        "answers": [
+            { "text": "return", "correct": true },
+            { "text": "exit", "correct": false },
+            { "text": "break", "correct": false },
+            { "text": "yield", "correct": false }
         ]
     },
     {
-        id: 10,
-        question: "Which monument in India is called the 'Symbol of Love'?",
-        answers: [
-            { text: "Qutub Minar", correct: false },
-            { text: "Red Fort", correct: false },
-            { text: "Taj Mahal", correct: true },
-            { text: "India Gate", correct: false }
+        "id": 10,
+        "question": "Which function is used to get the length of a string in C?",
+        "answers": [
+            { "text": "strlen()", "correct": true },
+            { "text": "size()", "correct": false },
+            { "text": "length()", "correct": false },
+            { "text": "count()", "correct": false }
         ]
     },
     {
-        id: 11,
-        question: "Who is the author of the Indian national anthem?",
-        answers: [
-            { text: "Sarojini Naidu", correct: false },
-            { text: "Rabindranath Tagore", correct: true },
-            { text: "Bankim Chandra Chatterjee", correct: false },
-            { text: "Aurobindo Ghosh", correct: false }
+        "id": 11,
+        "question": "What is the purpose of the main() function in C?",
+        "answers": [
+            { "text": "It is the starting point of a program", "correct": true },
+            { "text": "It defines variables", "correct": false },
+            { "text": "It contains loops", "correct": false },
+            { "text": "It is not necessary", "correct": false }
         ]
     },
     {
-        id: 12,
-        question: "Which is the smallest state in India by area?",
-        answers: [
-            { text: "Sikkim", correct: false },
-            { text: "Goa", correct: true },
-            { text: "Tripura", correct: false },
-            { text: "Nagaland", correct: false }
+        "id": 12,
+        "question": "What will be the output of the following code: printf(\"%c\", 'A' + 1);?",
+        "answers": [
+            { "text": "A", "correct": false },
+            { "text": "B", "correct": true },
+            { "text": "C", "correct": false },
+            { "text": "Error", "correct": false }
         ]
     },
     {
-        id: 13,
-        question: "Which of these is a popular folk dance of Punjab?",
-        answers: [
-            { text: "Bihu", correct: false },
-            { text: "Bhangra", correct: true },
-            { text: "Kathak", correct: false },
-            { text: "Garba", correct: false }
+        "id": 13,
+        "question": "Which of the following is a loop construct in C?",
+        "answers": [
+            { "text": "for", "correct": true },
+            { "text": "loop", "correct": false },
+            { "text": "each", "correct": false },
+            { "text": "while", "correct": true }
         ]
     },
     {
-        id: 14,
-        question: "Who was the first woman Prime Minister of India?",
-        answers: [
-            { text: "Indira Gandhi", correct: true },
-            { text: "Sonia Gandhi", correct: false },
-            { text: "Sarojini Naidu", correct: false },
-            { text: "Pratibha Patil", correct: false }
+        "id": 14,
+        "question": "How do you declare a pointer in C?",
+        "answers": [
+            { "text": "int ptr;", "correct": false },
+            { "text": "int* ptr;", "correct": true },
+            { "text": "ptr int;", "correct": false },
+            { "text": "pointer int;", "correct": false }
         ]
     },
     {
-        id: 15,
-        question: "Which is the longest river in India?",
-        answers: [
-            { text: "Yamuna", correct: false },
-            { text: "Godavari", correct: false },
-            { text: "Narmada", correct: false },
-            { text: "Ganga", correct: true }
+        "id": 15,
+        "question": "What is the value of the expression 5 / 2 in C?",
+        "answers": [
+            { "text": "2", "correct": true },
+            { "text": "2.5", "correct": false },
+            { "text": "3", "correct": false },
+            { "text": "Error", "correct": false }
         ]
     },
     {
-        id: 16,
-        question: "Who is known as the 'Iron Man of India'?",
-        answers: [
-            { text: "Jawaharlal Nehru", correct: false },
-            { text: "Sardar Vallabhbhai Patel", correct: true },
-            { text: "B. R. Ambedkar", correct: false },
-            { text: "Bhagat Singh", correct: false }
+        "id": 16,
+        "question": "Which of the following is used to handle memory dynamically in C?",
+        "answers": [
+            { "text": "malloc()", "correct": true },
+            { "text": "calloc()", "correct": true },
+            { "text": "free()", "correct": true },
+            { "text": "realloc()", "correct": true }
         ]
     },
     {
-        id: 17,
-        question: "Which Indian state is famous for its backwaters?",
-        answers: [
-            { text: "Tamil Nadu", correct: false },
-            { text: "Kerala", correct: true },
-            { text: "Goa", correct: false },
-            { text: "Karnataka", correct: false }
+        "id": 17,
+        "question": "What is the default value of an uninitialized variable in C?",
+        "answers": [
+            { "text": "0", "correct": false },
+            { "text": "undefined", "correct": true },
+            { "text": "NULL", "correct": false },
+            { "text": "random", "correct": false }
         ]
     },
     {
-        id: 18,
-        question: "Which festival is known as the 'Festival of Lights'?",
-        answers: [
-            { text: "Holi", correct: false },
-            { text: "Diwali", correct: true },
-            { text: "Eid", correct: false },
-            { text: "Lohri", correct: false }
+        "id": 18,
+        "question": "What is the purpose of the 'break' statement in C?",
+        "answers": [
+            { "text": "To exit a loop", "correct": true },
+            { "text": "To skip to the next iteration", "correct": false },
+            { "text": "To stop the program", "correct": false },
+            { "text": "To declare a variable", "correct": false }
         ]
     },
     {
-        id: 19,
-        question: "Which of these is the national sport of India?",
-        answers: [
-            { text: "Cricket", correct: false },
-            { text: "Kabaddi", correct: false },
-            { text: "Hockey", correct: true },
-            { text: "Badminton", correct: false }
+        "id": 19,
+        "question": "Which operator is used to compare two values in C?",
+        "answers": [
+            { "text": "=", "correct": false },
+            { "text": "==", "correct": true },
+            { "text": ">", "correct": false },
+            { "text": "<", "correct": false }
         ]
     },
     {
-        id: 20,
-        question: "Which is the largest desert in India?",
-        answers: [
-            { text: "Rann of Kutch", correct: false },
-            { text: "Thar Desert", correct: true },
-            { text: "Ladakh Desert", correct: false },
-            { text: "Spiti Valley", correct: false }
+        "id": 20,
+        "question": "What is the correct way to comment in C?",
+        "answers": [
+            { "text": "// comment", "correct": true },
+            { "text": "/* comment */", "correct": true },
+            { "text": "# comment", "correct": false },
+            { "text": "<!-- comment -->", "correct": false }
         ]
     },
     {
-        id: 21,
-        question: "Which city is known as the 'Pink City'?",
-        answers: [
-            { text: "Jodhpur", correct: false },
-            { text: "Jaipur", correct: true },
-            { text: "Udaipur", correct: false },
-            { text: "Bikaner", correct: false }
+        "id": 21,
+        "question": "Which library is required for using printf() function?",
+        "answers": [
+            { "text": "<stdio.h>", "correct": true },
+            { "text": "<stdlib.h>", "correct": false },
+            { "text": "<conio.h>", "correct": false },
+            { "text": "<string.h>", "correct": false }
         ]
     },
     {
-        id: 22,
-        question: "In which state is the Sun Temple of Konark located?",
-        answers: [
-            { text: "West Bengal", correct: false },
-            { text: "Odisha", correct: true },
-            { text: "Madhya Pradesh", correct: false },
-            { text: "Bihar", correct: false }
+        "id": 22,
+        "question": "What does the sizeof() operator return?",
+        "answers": [
+            { "text": "The length of a string", "correct": false },
+            { "text": "The size of a variable or data type", "correct": true },
+            { "text": "The address of a variable", "correct": false },
+            { "text": "The number of bytes in a file", "correct": false }
         ]
     },
     {
-        id: 23,
-        question: "Which freedom fighter said, 'Give me blood and I will give you freedom'?",
-        answers: [
-            { text: "Bhagat Singh", correct: false },
-            { text: "Mahatma Gandhi", correct: false },
-            { text: "Subhas Chandra Bose", correct: true },
-            { text: "Bal Gangadhar Tilak", correct: false }
+        "id": 23,
+        "question": "Which of the following is used to terminate a string in C?",
+        "answers": [
+            { "text": "\\0", "correct": true },
+            { "text": "\\n", "correct": false },
+            { "text": "\\t", "correct": false },
+            { "text": "\\e", "correct": false }
         ]
     },
     {
-        id: 24,
-        question: "Who was the first Indian to win a Nobel Prize?",
-        answers: [
-            { text: "C. V. Raman", correct: false },
-            { text: "Mother Teresa", correct: false },
-            { text: "Rabindranath Tagore", correct: true },
-            { text: "Hargobind Khurana", correct: false }
+        "id": 24,
+        "question": "How many times will the loop run: for(int i = 0; i < 5; i++)?",
+        "answers": [
+            { "text": "4", "correct": false },
+            { "text": "5", "correct": true },
+            { "text": "6", "correct": false },
+            { "text": "infinite", "correct": false }
         ]
     },
     {
-        id: 25,
-        question: "Which is the southernmost tip of India?",
-        answers: [
-            { text: "Kanyakumari", correct: true },
-            { text: "Rameswaram", correct: false },
-            { text: "Madurai", correct: false },
-            { text: "Coimbatore", correct: false }
+        "id": 25,
+        "question": "What does the keyword 'static' do in C?",
+        "answers": [
+            { "text": "Makes a variable local to a function", "correct": false },
+            { "text": "Keeps the variable value between function calls", "correct": true },
+            { "text": "Declares a global variable", "correct": false },
+            { "text": "Initializes a variable", "correct": false }
         ]
     },
     {
-        id: 26,
-        question: "Which Indian state is known as the 'Land of Rising Sun'?",
-        answers: [
-            { text: "Assam", correct: false },
-            { text: "Arunachal Pradesh", correct: true },
-            { text: "Sikkim", correct: false },
-            { text: "Manipur", correct: false }
+        "id": 26,
+        "question": "Which of the following statements is true about arrays in C?",
+        "answers": [
+            { "text": "Arrays can change size during runtime", "correct": false },
+            { "text": "Arrays are a collection of elements of different data types", "correct": false },
+            { "text": "Array indices start from 1", "correct": false },
+            { "text": "Arrays are a collection of elements of the same data type", "correct": true }
         ]
     },
     {
-        id: 27,
-        question: "Who wrote the book 'Discovery of India'?",
-        answers: [
-            { text: "Rabindranath Tagore", correct: false },
-            { text: "Jawaharlal Nehru", correct: true },
-            { text: "Mahatma Gandhi", correct: false },
-            { text: "Sardar Patel", correct: false }
+        "id": 27,
+        "question": "What is the correct way to declare an array of integers in C?",
+        "answers": [
+            { "text": "int arr[];", "correct": true },
+            { "text": "int arr(10);", "correct": false },
+            { "text": "array int arr;", "correct": false },
+            { "text": "int arr[10];", "correct": true }
         ]
     },
     {
-        id: 28,
-        question: "Which city is called the 'City of Joy'?",
-        answers: [
-            { text: "Chennai", correct: false },
-            { text: "Mumbai", correct: false },
-            { text: "Kolkata", correct: true },
-            { text: "Hyderabad", correct: false }
+        "id": 28,
+        "question": "How do you access the first element of an array in C?",
+        "answers": [
+            { "text": "array[1]", "correct": false },
+            { "text": "array[0]", "correct": true },
+            { "text": "array.first", "correct": false },
+            { "text": "array{0}", "correct": false }
         ]
     },
     {
-        id: 29,
-        question: "What is the national flower of India?",
-        answers: [
-            { text: "Rose", correct: false },
-            { text: "Lotus", correct: true },
-            { text: "Lily", correct: false },
-            { text: "Marigold", correct: false }
+        "id": 29,
+        "question": "Which of the following is a correct way to declare a two-dimensional array?",
+        "answers": [
+            { "text": "int arr[][];", "correct": false },
+            { "text": "int arr[10][20];", "correct": true },
+            { "text": "int arr(10, 20);", "correct": false },
+            { "text": "int arr[10,20];", "correct": false }
         ]
     },
     {
-        id: 30,
-        question: "Which Indian state is the leading producer of tea?",
-        answers: [
-            { text: "West Bengal", correct: false },
-            { text: "Kerala", correct: false },
-            { text: "Assam", correct: true },
-            { text: "Sikkim", correct: false }
+        "id": 30,
+        "question": "What will be the output of the following code: printf(\"%d\", sizeof(char));?",
+        "answers": [
+            { "text": "1", "correct": true },
+            { "text": "0", "correct": false },
+            { "text": "2", "correct": false },
+            { "text": "4", "correct": false }
+        ]
+    },
+    {
+        "id": 31,
+        "question": "What is the result of the expression 10 % 3?",
+        "answers": [
+            { "text": "1", "correct": true },
+            { "text": "3", "correct": false },
+            { "text": "10", "correct": false },
+            { "text": "2", "correct": false }
+        ]
+    },
+    {
+        "id": 32,
+        "question": "Which of the following functions is used to concatenate two strings in C?",
+        "answers": [
+            { "text": "strcat()", "correct": true },
+            { "text": "concat()", "correct": false },
+            { "text": "append()", "correct": false },
+            { "text": "strjoin()", "correct": false }
+        ]
+    },
+    {
+        "id": 33,
+        "question": "What does the 'continue' statement do in a loop?",
+        "answers": [
+            { "text": "Ends the loop", "correct": false },
+            { "text": "Skips the current iteration", "correct": true },
+            { "text": "Starts the loop over", "correct": false },
+            { "text": "Repeats the loop", "correct": false }
+        ]
+    },
+    {
+        "id": 34,
+        "question": "Which of the following is the correct syntax for a for loop?",
+        "answers": [
+            { "text": "for(i = 0; i < 5; i++)", "correct": true },
+            { "text": "for i = 0; i < 5; i++", "correct": false },
+            { "text": "for(i < 5; i++)", "correct": false },
+            { "text": "for(i = 0; i < 5)", "correct": false }
+        ]
+    },
+    {
+        "id": 35,
+        "question": "What is a NULL pointer in C?",
+        "answers": [
+            { "text": "A pointer that points to nothing", "correct": true },
+            { "text": "A pointer that is uninitialized", "correct": false },
+            { "text": "A pointer that points to a variable", "correct": false },
+            { "text": "A pointer that points to 0", "correct": false }
+        ]
+    },
+    {
+        "id": 36,
+        "question": "Which of the following is used to dynamically allocate memory in C?",
+        "answers": [
+            { "text": "alloc()", "correct": false },
+            { "text": "malloc()", "correct": true },
+            { "text": "new()", "correct": false },
+            { "text": "create()", "correct": false }
+        ]
+    },
+    {
+        "id": 37,
+        "question": "How do you release dynamically allocated memory in C?",
+        "answers": [
+            { "text": "delete", "correct": false },
+            { "text": "remove", "correct": false },
+            { "text": "free()", "correct": true },
+            { "text": "dispose", "correct": false }
+        ]
+    },
+    {
+        "id": 38,
+        "question": "What is the maximum size of an array in C?",
+        "answers": [
+            { "text": "Depends on the memory available", "correct": true },
+            { "text": "256", "correct": false },
+            { "text": "1024", "correct": false },
+            { "text": "65536", "correct": false }
+        ]
+    },
+    {
+        "id": 39,
+        "question": "Which of the following is true about the 'switch' statement in C?",
+        "answers": [
+            { "text": "It can only use integer values", "correct": false },
+            { "text": "It can use any data type", "correct": false },
+            { "text": "It requires a break statement", "correct": true },
+            { "text": "It does not allow fall-through behavior", "correct": false }
+        ]
+    },
+    {
+        "id": 40,
+        "question": "Which of the following is a standard library in C?",
+        "answers": [
+            { "text": "math.h", "correct": true },
+            { "text": "string.js", "correct": false },
+            { "text": "sys.lib", "correct": false },
+            { "text": "data.h", "correct": false }
+        ]
+    },
+    {
+        "id": 41,
+        "question": "What is the purpose of the 'sizeof' operator?",
+        "answers": [
+            { "text": "To count the number of elements in an array", "correct": false },
+            { "text": "To determine the memory size of a variable", "correct": true },
+            { "text": "To find the length of a string", "correct": false },
+            { "text": "To allocate memory", "correct": false }
+        ]
+    },
+    {
+        "id": 42,
+        "question": "Which function is used to read a character from stdin in C?",
+        "answers": [
+            { "text": "getchar()", "correct": true },
+            { "text": "scanf()", "correct": false },
+            { "text": "read()", "correct": false },
+            { "text": "input()", "correct": false }
+        ]
+    },
+    {
+        "id": 43,
+        "question": "Which of the following is not a valid C conditional statement?",
+        "answers": [
+            { "text": "if", "correct": false },
+            { "text": "else", "correct": false },
+            { "text": "unless", "correct": true },
+            { "text": "switch", "correct": false }
+        ]
+    },
+    {
+        "id": 44,
+        "question": "What is the purpose of the 'return' statement in a function?",
+        "answers": [
+            { "text": "To exit the function", "correct": false },
+            { "text": "To return a value from the function", "correct": true },
+            { "text": "To declare the function", "correct": false },
+            { "text": "To pass parameters", "correct": false }
+        ]
+    },
+    {
+        "id": 45,
+        "question": "Which of the following is a correct way to declare a function in C?",
+        "answers": [
+            { "text": "int function_name;", "correct": false },
+            { "text": "void function_name()", "correct": true },
+            { "text": "function_name()", "correct": false },
+            { "text": "function void()", "correct": false }
+        ]
+    },
+    {
+        "id": 46,
+        "question": "What does the 'volatile' keyword indicate in C?",
+        "answers": [
+            { "text": "The variable may change unexpectedly", "correct": true },
+            { "text": "The variable is constant", "correct": false },
+            { "text": "The variable can be optimized", "correct": false },
+            { "text": "The variable is unused", "correct": false }
+        ]
+    },
+    {
+        "id": 47,
+        "question": "Which of the following is a way to create a constant variable in C?",
+        "answers": [
+            { "text": "const int x = 10;", "correct": true },
+            { "text": "int const x = 10;", "correct": true },
+            { "text": "constant int x = 10;", "correct": false },
+            { "text": "int x const = 10;", "correct": false }
+        ]
+    },
+    {
+        "id": 48,
+        "question": "What will the following code print? printf(\"%d\", 10 < 5);",
+        "answers": [
+            { "text": "0", "correct": true },
+            { "text": "1", "correct": false },
+            { "text": "10", "correct": false },
+            { "text": "5", "correct": false }
+        ]
+    },
+    {
+        "id": 49,
+        "question": "Which of the following statements is used to include a standard library in C?",
+        "answers": [
+            { "text": "#include <stdio.h>", "correct": true },
+            { "text": "#library <stdio>", "correct": false },
+            { "text": "include <stdio>", "correct": false },
+            { "text": "#include stdio.h", "correct": false }
+        ]
+    },
+    {
+        "id": 50,
+        "question": "What is the result of the following expression: 'C' + 1?",
+        "answers": [
+            { "text": "'D'", "correct": true },
+            { "text": "'C'", "correct": false },
+            { "text": "67", "correct": false },
+            { "text": "68", "correct": false }
         ]
     }
-    // Add more questions following this format if needed.
-];
+]
