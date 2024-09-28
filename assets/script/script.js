@@ -8,7 +8,6 @@ const userScore = document.querySelector("#score")
 const container = document.querySelector(".container")
 
 
-
 const questionArray = [];
 let totalNoQuestions = 1
 let correctAnswers = 0
@@ -32,7 +31,6 @@ function generateQuestionNumber() {
 
 
     questionArray.push(randomIndex);
-    // console.log(questionArray);
     
     renderQuiz(randomIndex);
     }
@@ -104,5 +102,8 @@ function over() {
     
 }
 
-prevBtn.addEventListener("click", renderPrevQuestion); // Add event listener for "Previous" button
 nextBtn.addEventListener("click", generateQuestionNumber); // Add event listener for "Next" button
+
+const closeBtn = document.querySelector("#closeButton").addEventListener("click", () => {
+    document.querySelector("#popup").style.display = "none"
+})

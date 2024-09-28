@@ -4,6 +4,45 @@
     font-family: 'poppins';
     box-sizing: border-box;
 }
+.popup {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 500px;
+    max-width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    padding: 10px;
+}
+
+.popup-content {
+    background-color: #fff;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%; /* Could be more or less, depending on screen size */
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 .container{
     background : #fff;
     width : 500px;
@@ -81,6 +120,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-top: 25px;
+    gap: 20px;
 }
 .reset{
     display: flex;
@@ -90,6 +130,9 @@ body{
     font-size: 20px;
 }
 .reset{
+    display: none;
+}
+.next #prev {
     display: none;
 }
 @media(max-width : 555px)  {
