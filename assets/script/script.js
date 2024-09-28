@@ -104,6 +104,5 @@ function over() {
     
 }
 
-
-
-document.querySelector("#next").addEventListener("click", generateQuestionNumber);
+prevBtn.addEventListener("click", renderPrevQuestion); // Add event listener for "Previous" button
+nextBtn.addEventListener("click", generateQuestionNumber); // Add event listener for "Next" button
